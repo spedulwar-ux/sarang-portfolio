@@ -60,6 +60,7 @@ const LINKS = [
 export default function Nav() {
   const router = useRouter()
   const [open, setOpen] = useState(false)
+  const links = router.pathname === "/" ? LINKS : [{ href: "/", label: "Home" }, ...LINKS]
 
   return (
     <>
@@ -67,7 +68,7 @@ export default function Nav() {
       <nav className="nav-wrap">
         <Link href="/" className="nav-brand">Sarang®</Link>
         <div className="nav-links">
-          {LINKS.map(l => (
+          {links.map(l => (
             <Link key={l.href} href={l.href} className={`nav-link${router.pathname === l.href ? " active" : ""}`}>
               {l.label}
             </Link>
@@ -78,7 +79,7 @@ export default function Nav() {
         </button>
       </nav>
       <div className={`nav-mobile${open ? " open" : ""}`}>
-        {LINKS.map(l => (
+        {links.map(l => (
           <Link key={l.href} href={l.href} className="nav-mobile-link" onClick={() => setOpen(false)}>
             {l.label}
           </Link>

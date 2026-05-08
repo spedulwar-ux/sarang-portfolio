@@ -9,7 +9,7 @@ const CSS = `
   }
   .hn-root {
     width: 100%; background: #000;
-    padding: 48px 0 0 0; box-sizing: border-box;
+    padding: 76px 0 0 0; box-sizing: border-box;
   }
   .hn-meta {
     display: flex; justify-content: space-between; align-items: center;
@@ -41,7 +41,7 @@ const CSS = `
     background: rgba(187,187,187,0.15); margin-top: 14px;
   }
   @media (max-width: 810px) {
-    .hn-root { padding-top: 36px; }
+    .hn-root { padding-top: 72px; }
     .hn-meta { margin-bottom: 14px; }
     .hn-text { font-size: 28vw; }
   }
