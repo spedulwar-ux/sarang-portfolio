@@ -2,7 +2,7 @@ const CSS = `
 .lfs-wrap { width:100%; background:#000; padding:16px 24px 104px; box-sizing:border-box; font-family:inherit; }
 .lfs-top { display:flex; align-items:flex-end; justify-content:space-between; gap:32px; padding-bottom:34px; border-bottom:1px solid rgba(255,255,255,0.08); }
 .lfs-label { font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.28); margin-bottom:14px; }
-.lfs-title { margin:0; color:#fff; font-size:clamp(52px,10vw,132px); line-height:0.84; letter-spacing:-0.055em; font-weight:800; }
+.lfs-title { margin:0; color:#fff; font-size:clamp(52px,10vw,132px); line-height:0.84; letter-spacing:-0.055em; font-weight:800; white-space:nowrap; }
 .lfs-copy { max-width:380px; margin:0 0 20px; color:rgba(255,255,255,0.38); font-size:13px; line-height:1.7; }
 .lfs-cta { color:rgba(255,255,255,0.58); text-decoration:none; text-transform:uppercase; letter-spacing:0.18em; font-size:11px; font-weight:600; border-bottom:1px solid rgba(255,255,255,0.18); padding-bottom:3px; }
 .lfs-grid { display:grid; grid-template-columns:repeat(6,1fr); gap:1px; background:rgba(255,255,255,0.07); margin-top:1px; }
@@ -36,7 +36,7 @@ export default function LogofolioSection() {
         <div className="lfs-top">
           <div>
             <div className="lfs-label">Mark making</div>
-            <h2 className="lfs-title">Logo<br />folio</h2>
+            <h2 className="lfs-title">Logofolio</h2>
           </div>
           <div>
             <p className="lfs-copy">A curated set of wordmarks, symbols, and letterforms built for clarity and longevity.</p>

@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic"
 import Head from "next/head"
 import Nav from "../components/Nav"
 import HeroName from "../components/HeroName"
@@ -10,8 +9,6 @@ import LogofolioSection from "../components/LogofolioSection"
 import PrintsSection from "../components/PrintsSection"
 import Footer from "../components/Footer"
 
-const IntroOverlay = dynamic(() => import("../components/IntroOverlay"), { ssr: false })
-
 export default function Home() {
   return (
     <>
@@ -21,7 +18,6 @@ export default function Home() {
         <meta property="og:title" content="Sarang Pedulwar — Art Director & Illustrator" />
         <meta property="og:description" content="8+ years crafting bold brand identities, campaigns, and visual systems for companies that dare to stand out." />
       </Head>
-      <IntroOverlay />
       <Nav />
       <main id="top">
         <HeroName />

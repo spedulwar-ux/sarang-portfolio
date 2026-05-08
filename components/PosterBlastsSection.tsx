@@ -2,7 +2,7 @@ const CSS = `
 .pbs-wrap { width:100%; background:#000; padding:20px 0 96px; box-sizing:border-box; font-family:inherit; overflow:hidden; }
 .pbs-head { display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:32px; }
 .pbs-kicker { font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:14px; }
-.pbs-title { margin:0; font-size:clamp(52px,10vw,132px); line-height:0.86; letter-spacing:-0.05em; color:#fff; font-weight:800; }
+.pbs-title { margin:0; font-size:clamp(48px,9vw,124px); line-height:0.86; letter-spacing:-0.05em; color:#fff; font-weight:800; white-space:nowrap; }
 .pbs-copy { margin:0 0 20px; max-width:360px; color:rgba(255,255,255,0.38); font-size:13px; line-height:1.65; }
 .pbs-cta { display:inline-flex; color:rgba(255,255,255,0.58); text-decoration:none; text-transform:uppercase; letter-spacing:0.18em; font-size:11px; font-weight:600; border-bottom:1px solid rgba(255,255,255,0.18); padding-bottom:3px; }
 .pbs-head { padding:0 24px; box-sizing:border-box; }
@@ -34,7 +34,7 @@ export default function PosterBlastsSection() {
         <div className="pbs-head">
           <div>
             <div className="pbs-kicker">Poster archive</div>
-            <h2 className="pbs-title">Poster<br />Blasts</h2>
+            <h2 className="pbs-title">Poster Blasts</h2>
           </div>
           <div>
             <p className="pbs-copy">Campaign posters, event graphics, and brand moments designed to stop the scroll.</p>
