@@ -1,11 +1,13 @@
 import dynamic from "next/dynamic"
 import Head from "next/head"
 import Nav from "../components/Nav"
-import HeroTopSection from "../components/HeroTopSection"
 import HeroName from "../components/HeroName"
 import HeroBio from "../components/HeroBio"
 import ClientLogoStrip from "../components/ClientLogoStrip"
 import FeaturedWorksSection from "../components/FeaturedWorksSection"
+import PosterBlastsSection from "../components/PosterBlastsSection"
+import LogofolioSection from "../components/LogofolioSection"
+import PrintsSection from "../components/PrintsSection"
 import Footer from "../components/Footer"
 
 const IntroOverlay = dynamic(() => import("../components/IntroOverlay"), { ssr: false })
@@ -22,11 +24,13 @@ export default function Home() {
       <IntroOverlay />
       <Nav />
       <main id="top">
-        <HeroTopSection />
         <HeroName />
         <HeroBio />
         <ClientLogoStrip />
         <FeaturedWorksSection />
+        <PosterBlastsSection />
+        <LogofolioSection />
+        <PrintsSection />
       </main>
       <Footer />
     </>
