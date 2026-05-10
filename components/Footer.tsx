@@ -77,7 +77,7 @@ export default function Footer() {
           <a href="#top" className="ft-top-btn">↑ Back to Top</a>
         </div>
         <div className="ft-bottom">
-          <h2 className="ft-year">©2025</h2>
+          <h2 className="ft-year">©2026</h2>
           <p className="ft-credit">Designed &amp; built by Sarang Pedulwar</p>
         </div>
       </footer>
