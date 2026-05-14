@@ -70,13 +70,14 @@ const FILTERS = ["All", "Limited", "Rare", "Collector"]
 
 const PRINTS = [
   { num:"01", name:"Shopping Bag", edition:"Flipkart Kilos", tag:"Limited", thumbImg:"https://framerusercontent.com/images/7EqiVItbgXxfZkbhQsP6AVUfDc.jpg", caseStudyImgs:["https://framerusercontent.com/images/ZhrqhX8B2IPHzc8XgHQYaDUk4TU.jpg","https://framerusercontent.com/images/IzLDTowOdllSbJcvWW1xIdzfuqI.jpg","https://framerusercontent.com/images/zdK3HgsITk5nZnvGm3vB6oIb0Ew.jpg"], desc:"Designed a vibrant shopping bag for Flipkart Kilos using playful illustrations and bold typography inspired by everyday grocery essentials." },
-  { num:"02", name:"Mango Box", edition:"RCB × BigBasket", tag:"Limited", thumbImg:"https://framerusercontent.com/images/Dw2W33KNLlJXfYae1uICn728Bck.jpg", caseStudyImgs:["https://framerusercontent.com/images/KnxnSqvHPbHjzTLxsmTlYXkHXfE.jpg","https://framerusercontent.com/images/ajVwox1zd6uPkD3HoxigdzM308.jpg","https://framerusercontent.com/images/Xs2FIBNjjVeEdIIwTd4itBKZjx4.jpg"], desc:"Created a custom mango-themed unboxing experience for an RCB and BigBasket collaboration." },
-  { num:"03", name:"Car Livery", edition:"TSI Racing × WRC", tag:"Limited", thumbImg:"https://framerusercontent.com/images/WUBnVKXW2iA5Y7z5pc6bl9bVVg.jpg", caseStudyImgs:["https://framerusercontent.com/images/BTGXNyttOyoZ8CDs5I6FDOoOe0.jpg","https://framerusercontent.com/images/Mgpe5hyl1OP0fkxmGynv0eqrc.jpg","https://framerusercontent.com/images/ag4JWULprNOkkTzoOXRFKcwWk4.jpg"], desc:"Designed the official rally car livery for TSI Racing\'s WRC campaign." },
+  { num:"02", name:"Mango Box", edition:"RCB Ã BigBasket", tag:"Limited", thumbImg:"https://framerusercontent.com/images/Dw2W33KNLlJXfYae1uICn728Bck.jpg", caseStudyImgs:["https://framerusercontent.com/images/KnxnSqvHPbHjzTLxsmTlYXkHXfE.jpg","https://framerusercontent.com/images/ajVwox1zd6uPkD3HoxigdzM308.jpg","https://framerusercontent.com/images/Xs2FIBNjjVeEdIIwTd4itBKZjx4.jpg"], desc:"Created a custom mango-themed unboxing experience for an RCB and BigBasket collaboration." },
+  { num:"03", name:"Car Livery", edition:"TSI Racing Ã WRC", tag:"Limited", thumbImg:"https://framerusercontent.com/images/WUBnVKXW2iA5Y7z5pc6bl9bVVg.jpg", caseStudyImgs:["https://framerusercontent.com/images/BTGXNyttOyoZ8CDs5I6FDOoOe0.jpg","https://framerusercontent.com/images/Mgpe5hyl1OP0fkxmGynv0eqrc.jpg","https://framerusercontent.com/images/ag4JWULprNOkkTzoOXRFKcwWk4.jpg"], desc:"Designed the official rally car livery for TSI Racing\'s WRC campaign." },
   { num:"04", name:"Car Liveries", edition:"TSI Racing", tag:"Rare", thumbImg:"https://framerusercontent.com/images/nE8ZKI8YYo3R3IcuvUCb5DEdA.jpg", caseStudyImgs:["https://framerusercontent.com/images/o6Yu28baHNl34oRQfyW1jgat8.jpg","https://framerusercontent.com/images/bZSYxbyfksC4eyKjFAOdqW9nE8.jpg","https://framerusercontent.com/images/4QTG7btoepRDJAr56NfhT5XK4PE.jpg"], desc:"Developed multiple racing liveries for TSI Racing\'s national motorsport campaigns." },
-  { num:"05", name:"Invite Box", edition:"CBD – Central Bar District", tag:"Rare", thumbImg:"https://framerusercontent.com/images/csOMtfvE61PNmPJQbthQdbKnaRc.jpg", caseStudyImgs:["https://framerusercontent.com/images/fv8dDmNGiO0A8jTMbMjSr469mZw.jpg","https://framerusercontent.com/images/2aW5ivXG6vz7OFfN0WeSCeXH6Xk.jpg","https://framerusercontent.com/images/u0yVc7Gj1MSu77hfRD2LUCZlC20.jpg"], desc:"Designed a bold PR invite box for the launch of Central Bar District." },
+  { num:"05", name:"Invite Box", edition:"CBD â Central Bar District", tag:"Rare", thumbImg:"https://framerusercontent.com/images/csOMtfvE61PNmPJQbthQdbKnaRc.jpg", caseStudyImgs:["https://framerusercontent.com/images/fv8dDmNGiO0A8jTMbMjSr469mZw.jpg","https://framerusercontent.com/images/2aW5ivXG6vz7OFfN0WeSCeXH6Xk.jpg","https://framerusercontent.com/images/u0yVc7Gj1MSu77hfRD2LUCZlC20.jpg"], desc:"Designed a bold PR invite box for the launch of Central Bar District." },
   { num:"06", name:"Calendar 2025", edition:"Bhadra", tag:"Collector", thumbImg:"https://framerusercontent.com/images/EomrQIZWGJWIuzX0P0iw0N7lbA.jpg", caseStudyImgs:["https://framerusercontent.com/images/bqSJBC6krtbsQYIeLLhqvu6Y7o.jpg","https://framerusercontent.com/images/te6P6bRqyZ3yKuYFYNQJAnckoNo.jpg","https://framerusercontent.com/images/wY3yuvN1Lf3tQUM8EUaSTstsI.jpg"], desc:"Designed a custom calendar for Bhadra featuring illustrated architectural wonders from around the world." },
   { num:"07", name:"Calendar 2023", edition:"BigBasket", tag:"Collector", thumbImg:"https://framerusercontent.com/images/rKiJSTDaaXlj1j5R1eKDqowu8U.jpg", caseStudyImgs:["https://framerusercontent.com/images/Yb4bWI5Hj3Dbz0Qz00PPNYlyjwM.jpg","https://framerusercontent.com/images/0uONd4saOdLe0MfXXrwSKYpBkms.jpg","https://framerusercontent.com/images/MPa457gqhmscn5z3foqkDQrSkAM.jpg"], desc:"Designed an illustrated calendar for BigBasket themed around major festivals and seasonal moments." },
   { num:"08", name:"Fresheners Packaging", edition:"Whiff Story", tag:"Collector", thumbImg:"https://framerusercontent.com/images/eStEMtmVKIWFvolsm9wYEshTC0.jpg", caseStudyImgs:["https://framerusercontent.com/images/ut2vMtk97V2u2X06AoDnpnrdk.jpg","https://framerusercontent.com/images/mUgReGpRaMePImJF2jbAGPUcFDE.jpg","https://framerusercontent.com/images/J9PbpknFG8uhSfYtOJE52mkgp5g.jpg"], desc:"Designed a packaging system for Whiff Story featuring a wide range of fragrances across different variants and formats." },
+  { num:"09", name:"Carry Bags", edition:"BBNow × Spotify", tag:"Limited", thumbImg:"/images/bbnowXSpotify_CS_Thumb.jpg", caseStudyImgs:["/images/bbnowXSpotify_CS_1.jpg","/images/bbnowXSpotify_CS_2.jpg","/images/bbnowXSpotify_CS_3.jpg"], desc:"Illustration-led festive carry bag designs created for a collaborative campaign between BigBasket Now and Spotify. Inspired by the vibrancy of Diwali celebrations, the visuals combined playful storytelling with interactive music-led experiences through curated Spotify playlists integrated into the packaging." },
 ]
 
 export default function PrintsPage() {
@@ -114,7 +115,7 @@ export default function PrintsPage() {
             <div className="pd-bar-left">
               <span className="pd-bar-label">Packaging & Print</span>
               <div className="pd-bar-sep"/>
-              {activePrint && <span className="pd-bar-title">{activePrint.name} · {activePrint.edition}</span>}
+              {activePrint && <span className="pd-bar-title">{activePrint.name} Â· {activePrint.edition}</span>}
             </div>
             <button className="pd-close" onClick={() => setActivePrint(null)} aria-label="Close">
               <svg viewBox="0 0 10 10" fill="none"><path d="M1 1L9 9M9 1L1 9" strokeLinecap="round"/></svg>
@@ -133,7 +134,7 @@ export default function PrintsPage() {
                 <div className="pd-subtitle">{activePrint.edition}</div>
                 <div className="pd-rule"/>
                 <p className="pd-desc">{activePrint.desc}</p>
-                <div className="pd-cta-wrap"><button className="pd-back-btn" onClick={() => setActivePrint(null)}>← Back to All Prints</button></div>
+                <div className="pd-cta-wrap"><button className="pd-back-btn" onClick={() => setActivePrint(null)}>â Back to All Prints</button></div>
               </div>
             )}
           </div>
@@ -148,7 +149,7 @@ export default function PrintsPage() {
           </div>
           <h1 className="pp-h1">PRI<em>NTS</em></h1>
           <div className="pp-header-meta">
-            <p className="pp-header-desc">A curated collection of packaging and print projects — each one crafted with intention.</p>
+            <p className="pp-header-desc">A curated collection of packaging and print projects â each one crafted with intention.</p>
             <span className="pp-count">{PRINTS.length} Projects</span>
           </div>
           <div className="pp-filters">
@@ -174,7 +175,7 @@ export default function PrintsPage() {
           </div>
           <div className="pp-soon-bar">
             <div><div className="pp-soon-title">New projects dropping soon.</div><div className="pp-soon-sub">Be the first to know when new work goes live.</div></div>
-            <a href="mailto:spedulwar@gmail.com" className="pp-notify-btn">Get in Touch →</a>
+            <a href="mailto:spedulwar@gmail.com" className="pp-notify-btn">Get in Touch â</a>
           </div>
         </div>
       </div>
