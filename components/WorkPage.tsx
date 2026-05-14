@@ -65,8 +65,10 @@ const PROJECTS: Project[] = [
   { slug:"drivex", title:"DriveX", category:"Visual Identity", year:"2024", thumbImg:"https://framerusercontent.com/images/Nkpr9MhgKvVHhtcuiJQJEifkhU.jpg", caseStudyJpgs:["https://framerusercontent.com/images/tIW8yEQpSlcItuPHnk5z4L1SJU.jpg"] },
   { slug:"cureskin-pro", title:"CureSkin Pro", category:"Product · App Design", year:"2024", thumbImg:"https://framerusercontent.com/images/dZp11Q4M1VJMnYi4QzboGOHVTo.jpg", caseStudyJpgs:["https://framerusercontent.com/images/SJRzfUTtdIxOj2rTvS7Si2ip83E.jpg","https://framerusercontent.com/images/KZv0EnZ5TvinW6OFogaQdabiP4.jpg","https://framerusercontent.com/images/lewGP63EBQzA2RZTiF3s8xZkDzM.jpg","https://framerusercontent.com/images/Bn35CiyNkycfDowvxOo3J8O5EDg.jpg","https://framerusercontent.com/images/4nByDnRvJdKBn2PPgtmdPmr3EQ.jpg"] },
   { slug:"aukera", title:"Aukera", category:"Campaign & Brand Communication", year:"2023" },
-  { slug:"swiggy", title:"Swiggy", category:"Brand Identity", year:"2024" },
+  { slug:"swiggy", title:"Swiggy", category:"Digital Design · Emailers", year:"2024", thumbImg:"/images/Swiggy_CS_Thumb.jpg", caseStudyJpgs:["/images/Swiggy_CS_FP_1.jpg","/images/Swiggy_CS_FP_2.jpg","/images/Swiggy_CS_FP_3.jpg"] },
   { slug:"flipkart", title:"Flipkart", category:"Campaign Design", year:"2024" },
+  { slug:"bbinstant", title:"bbInstant", category:"Brand Communication · Print", year:"2023", thumbImg:"/images/bbinstant_CS_Thumb.jpg", caseStudyJpgs:["/images/bbinstant_CS_FP_1.jpg","/images/bbinstant_CS_FP_2.jpg"] },
+  { slug:"mobil", title:"Mobil — Pitch Work", category:"Loyalty Program · Brand Identity", year:"2024", thumbImg:"/images/Mobil_CS_Thumb.jpg", caseStudyJpgs:["/images/Mobil_CS_FP_1.jpg","/images/Mobil_CS_FP_2.jpg"] },
 ]
 
 function CaseStudyModal({ project, onClose }: { project: Project | null; onClose: () => void }) {
