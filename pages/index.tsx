@@ -95,9 +95,10 @@ const CSS = `
 .poster-cap { display:flex; justify-content:space-between; margin-top:14px; font-family:var(--sans); font-weight:700; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
 
 /* ── logofolio preview ── */
-.logo-grid { display:grid; grid-template-columns:repeat(6,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
-.logo-cell { background:var(--bg); aspect-ratio:1; display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-weight:500; font-style:italic; font-size:clamp(15px,1.4vw,22px); color:var(--text); opacity:.7; transition:opacity .25s,background .25s; }
-.logo-cell:hover { opacity:1; background:var(--panel); }
+.logo-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+.logo-cell { background:var(--bg-2); aspect-ratio:1; overflow:hidden; position:relative; transition:background .25s; }
+.logo-cell:hover { background:var(--panel); }
+.logo-cell img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
 
 /* ── prints preview ── */
 .prints-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(16px,2vw,32px); }
