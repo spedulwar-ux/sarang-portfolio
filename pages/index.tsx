@@ -38,16 +38,14 @@ const CSS = `
 .hero-btn .arr { transition:transform .25s; }
 .hero-btn:hover .arr { transform:translate(3px,-3px); }
 
-/* ── clients marquee ── */
-.clients { border-bottom:1px solid var(--line); padding-block:30px; overflow:hidden; }
-.clients-inner { max-width:var(--maxw); margin:0 auto; padding-inline:var(--edge); display:flex; align-items:center; gap:clamp(28px,5vw,72px); }
-.clients-lbl { flex:none; }
-.marquee { overflow:hidden; flex:1; -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent); mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent); }
-.marquee-track { display:flex; gap:clamp(40px,5vw,76px); width:max-content; animation:marquee-scroll 26s linear infinite; }
-.clients:hover .marquee-track { animation-play-state:paused; }
+/* ── clients logo strip ── */
+.clients { border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding-block:0; overflow:hidden; }
 @keyframes marquee-scroll { to { transform:translateX(-50%); } }
-.client-name { font-family:var(--serif); font-weight:500; font-size:clamp(22px,2.2vw,30px); letter-spacing:-.01em; color:var(--text); opacity:.45; white-space:nowrap; transition:opacity .2s; font-style:italic; }
-.client-name:hover { opacity:1; }
+.marquee-track { display:flex; width:max-content; animation:marquee-scroll 32s linear infinite; align-items:center; gap:0; }
+.clients:hover .marquee-track { animation-play-state:paused; }
+.logo-item { display:flex; align-items:center; justify-content:center; flex-shrink:0; height:72px; padding-left:56px; padding-right:56px; border-right:1px solid var(--line); }
+.logo-item img { max-height:48px; width:auto; max-width:160px; object-fit:contain; display:block; opacity:.55; transition:opacity .2s; }
+.logo-item:hover img { opacity:1; }
 
 /* ── featured works ── */
 .project { display:grid; grid-template-columns:1fr 1fr; gap:clamp(34px,5vw,90px); align-items:center; padding-block:clamp(48px,5vw,80px); border-bottom:1px solid var(--line); }
@@ -168,7 +166,20 @@ const PROJECTS: Project[] = [
   },
 ]
 
-const CLIENTS = ["Flipkart","Aukera","IFB","Homeland Security","Bhadra","BigBasket","Swiggy","DriveX","CureSkin"]
+const LOGOS = [
+  { src:"https://framerusercontent.com/images/NpG1HQ4cjYjKhxvn1ZKVxbJ4w3c.png", alt:"Client", maxH:28, maxW:130 },
+  { src:"https://framerusercontent.com/images/tWIOtuc84bu5wMJ4ZOXbbBfhOfM.png", alt:"Flipkart", maxH:48, maxW:160 },
+  { src:"https://framerusercontent.com/images/hI6KjQKWvvDVItkvKoG2nNS7F2E.png", alt:"Client", maxH:28, maxW:130 },
+  { src:"https://framerusercontent.com/images/2K6RKz3HyAgkOYTyqkseZBHE0I.png", alt:"Swiggy", maxH:48, maxW:160 },
+  { src:"https://framerusercontent.com/images/jW8M5IwHPZgfbvPEN2nDK5D78I.png", alt:"RCB", maxH:64, maxW:180 },
+  { src:"https://framerusercontent.com/images/ljOdAoALCSidEtJkPZtXLbgJs.png", alt:"Client", maxH:28, maxW:130 },
+  { src:"https://framerusercontent.com/images/FmyFvbYkOpTGutkvLRtSSbZsMA.png", alt:"Client", maxH:28, maxW:130 },
+  { src:"https://framerusercontent.com/images/KP7TKJUOUUp3QuoVHlCd2HcvCQ.png", alt:"Client", maxH:48, maxW:160 },
+  { src:"https://framerusercontent.com/images/xs9NdWKisvP9XK6WFbmT51sME.png", alt:"Bhadra", maxH:48, maxW:160 },
+  { src:"https://framerusercontent.com/images/gI0zN7jxeygdDSC0J4BtbBZKPU.png", alt:"Bigbasket", maxH:48, maxW:160 },
+  { src:"https://framerusercontent.com/images/59nwIFnZtPBF4ivmylwQgO6WHdg.png", alt:"Client", maxH:28, maxW:130 },
+  { src:"https://framerusercontent.com/images/iKCuu98uawW9Kwl23lJHkM0PNs.png", alt:"Client", maxH:28, maxW:130 },
+]
 
 const POSTER_PREVIEW = [
   { src:"https://framerusercontent.com/images/iE8GUSpBXPWoEaOp3ETJJ8aGTOE.jpg", label:"Campaign" },
@@ -289,17 +300,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── CLIENTS MARQUEE ── */}
+        {/* ── CLIENTS LOGO STRIP ── */}
         <section className="clients">
-          <div className="clients-inner">
-            <span className="eyebrow clients-lbl">Trusted by</span>
-            <div className="marquee">
-              <div className="marquee-track">
-                {[...CLIENTS, ...CLIENTS].map((c, i) => (
-                  <span key={i} className="client-name" aria-hidden={i >= CLIENTS.length}>{c}</span>
-                ))}
+          <div className="marquee-track">
+            {[...LOGOS, ...LOGOS].map((logo, i) => (
+              <div key={i} className="logo-item" aria-hidden={i >= LOGOS.length}>
+                <img src={logo.src} alt={logo.alt} style={{maxHeight: logo.maxH, maxWidth: logo.maxW}} />
               </div>
-            </div>
+            ))}
           </div>
         </section>
 
