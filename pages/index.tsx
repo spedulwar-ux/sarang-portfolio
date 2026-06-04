@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import Head from "next/head"
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
@@ -28,7 +28,7 @@ const CSS = `
 .hero-line { font-family:var(--serif); font-weight:430; font-size:clamp(48px,9.2vw,164px); line-height:.98; letter-spacing:-.025em; margin:clamp(34px,5vw,74px) 0 0; max-width:17ch; }
 .hero-line .hi { font-style:italic; }
 .hero-line .hpin { color:var(--lime); font-style:normal; }
-.hero-foot { display:grid; grid-template-columns:1fr auto; gap:48px; align-items:end; margin-top:clamp(40px,5�w,86px); padding-top:30px; border-top:1px solid var(--line); }
+.hero-foot { display:grid; grid-template-columns:1fr auto; gap:48px; align-items:end; margin-top:clamp(40px,5vw,86px); padding-top:30px; border-top:1px solid var(--line); }
 .standfirst { display:flex; gap:34px; max-width:760px; }
 .standfirst-dc { font-family:var(--serif); font-weight:500; font-size:60px; line-height:.8; color:var(--lime); flex:none; }
 .standfirst p { margin:0; font-size:17px; line-height:1.6; color:var(--muted-2); max-width:48ch; }
@@ -134,7 +134,7 @@ const CSS = `
 /* ─────────────────────────── DATA ─────────────────────────── */
 interface Project {
   num: string; reverse: boolean; heroImg: string;
-  name: string; nameJsx: JSX.Element; category: string; year: string; desc: string;
+  name: string; nameJsx: React.ReactNode; category: string; year: string; desc: string;
   caseStudyJpgs: string[];
 }
 
