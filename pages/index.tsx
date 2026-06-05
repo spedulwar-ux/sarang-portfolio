@@ -3,7 +3,7 @@ import Head from "next/head"
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
 
-/* âââââââââââââââââââââââââââ CSS âââââââââââââââââââââââââââ */
+/* ─────────────────────────── CSS ─────────────────────────── */
 const CSS = `
 /* shared utils */
 .eyebrow { font-family:var(--sans); font-weight:700; font-size:13px; letter-spacing:.24em; text-transform:uppercase; color:var(--muted); }
@@ -21,7 +21,7 @@ const CSS = `
 .band-desc { color:var(--muted-2); font-size:18px; line-height:1.55; max-width:42ch; justify-self:end; }
 .band-desc .seclink { margin-top:18px; display:inline-flex; }
 
-/* ââ hero ââ */
+/* ── hero ── */
 .hero { padding-top:clamp(48px,7vw,96px); padding-bottom:clamp(40px,5vw,72px); }
 .hero-top { display:flex; justify-content:space-between; align-items:baseline; padding-bottom:clamp(26px,3vw,44px); border-bottom:1px solid var(--line); }
 .hero-top-r { font-family:var(--sans); font-weight:700; font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); }
@@ -38,7 +38,7 @@ const CSS = `
 .hero-btn .arr { transition:transform .25s; }
 .hero-btn:hover .arr { transform:translate(3px,-3px); }
 
-/* ââ clients logo strip ââ */
+/* ── clients logo strip ── */
 .clients { border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding-block:0; overflow:hidden; }
 @keyframes marquee-scroll { to { transform:translateX(-50%); } }
 .marquee-track { display:flex; width:max-content; animation:marquee-scroll 32s linear infinite; align-items:center; gap:0; }
@@ -46,7 +46,7 @@ const CSS = `
 .logo-item { display:flex; align-items:center; justify-content:center; flex-shrink:0; height:72px; padding-left:56px; padding-right:56px; border-right:1px solid var(--line); }
 .logo-item img { max-height:48px; width:auto; max-width:160px; object-fit:contain; display:block; opacity:1; }
 
-/* ââ featured works ââ */
+/* ── featured works ── */
 .project { display:grid; grid-template-columns:1fr 1fr; gap:clamp(34px,5vw,90px); align-items:center; padding-block:clamp(48px,5vw,80px); border-bottom:1px solid var(--line); }
 .project:first-of-type { padding-top:0; }
 .project.flip .proj-media { order:2; }
@@ -70,7 +70,7 @@ const CSS = `
 .proj-cta .arr { transition:transform .25s; }
 .proj-cta:hover .arr { transform:translateX(5px); }
 
-/* ââ case study modal ââ */
+/* ── case study modal ── */
 .cs-overlay { position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; background:rgba(0,0,0,.85); overflow-y:scroll; overflow-x:hidden; overscroll-behavior:contain; opacity:0; pointer-events:none; transition:opacity .35s; }
 .cs-overlay.open { opacity:1; pointer-events:all; }
 .cs-panel { width:68%; max-width:820px; margin:0 auto; background:var(--panel); }
@@ -87,20 +87,20 @@ const CSS = `
 @media(max-width:900px){ .cs-panel{ width:92%; } }
 @media(max-width:640px){ .cs-panel{ width:96%; } .cs-bar{ padding:12px 16px; } .cs-bar-title{ display:none; } }
 
-/* ââ poster blasts preview ââ */
+/* ── poster blasts preview ── */
 .poster-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(12px,1.4vw,22px); }
 .poster-cell { position:relative; aspect-ratio:3/4; border-radius:4px; overflow:hidden; border:1px solid var(--line); background:var(--bg-2); }
 .poster-cell img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .45s ease; }
 .poster-cell:hover img { transform:scale(1.04); }
 .poster-cap { display:flex; justify-content:space-between; margin-top:14px; font-family:var(--sans); font-weight:700; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
 
-/* ââ logofolio preview ââ */
+/* ── logofolio preview ── */
 .logo-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
 .logo-cell { background:var(--bg-2); aspect-ratio:1; overflow:hidden; position:relative; transition:background .25s; }
 .logo-cell:hover { background:var(--panel); }
 .logo-cell img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
 
-/* ââ prints preview ââ */
+/* ── prints preview ── */
 .prints-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(16px,2vw,32px); }
 .print-thumb { display:block; width:100%; aspect-ratio:5/4; border-radius:4px; overflow:hidden; border:1px solid var(--line); background:var(--bg-2); position:relative; }
 .print-thumb img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .45s ease; }
@@ -109,7 +109,7 @@ const CSS = `
 .print-cap-nm { font-family:var(--serif); font-weight:500; font-size:24px; }
 .print-cap-ty { font-family:var(--sans); font-weight:600; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
 
-/* ââ responsive ââ */
+/* ── responsive ── */
 @media (max-width:960px) {
   .hero-foot { grid-template-columns:1fr; gap:30px; }
   .project { grid-template-columns:1fr; gap:30px; }
@@ -129,7 +129,7 @@ const CSS = `
 }
 `
 
-/* âââââââââââââââââââââââââââ DATA âââââââââââââââââââââââââââ */
+/* ─────────────────────────── DATA ─────────────────────────── */
 interface Project {
   num: string; reverse: boolean; heroImg: string;
   name: string; nameJsx: React.ReactNode; category: string; year: string; desc: string;
@@ -142,7 +142,7 @@ const PROJECTS: Project[] = [
     heroImg:"https://framerusercontent.com/images/iCG93L1SDmSIMX66jwWHBiCT9Qg.png",
     name:"Ooty Literary Festival 2025",
     nameJsx:<>Ooty Literary<br /><em>Festival</em> 2025</>,
-    category:"Event Identity â Print", year:"2025",
+    category:"Event Identity — Print", year:"2025",
     desc:"Complete visual identity and print collateral for one of South India's most celebrated literary festivals.",
     caseStudyJpgs:["https://framerusercontent.com/images/mr6ZhXdrhRbPAfBxONFWOafufMU.jpg","https://framerusercontent.com/images/bAYQek0hh4jMFnECPytzaSkDVA.jpg","https://framerusercontent.com/images/45KwP2q2sxzo2GlIb57XQ3Y9LM.jpg","https://framerusercontent.com/images/08T6019tp3iEY1KeujFRxL7vZyU.jpg","https://framerusercontent.com/images/TvwlDG92iqMXBhiDELSW3tA8LpU.jpg"],
   },
@@ -152,7 +152,7 @@ const PROJECTS: Project[] = [
     name:"TSI Racing",
     nameJsx:<>TSI <em>Racing</em></>,
     category:"Performance Identity", year:"2024",
-    desc:"An identity system crafted to capture the intensity and energy of motorsport â built for speed, designed to last.",
+    desc:"An identity system crafted to capture the intensity and energy of motorsport — built for speed, designed to last.",
     caseStudyJpgs:["https://framerusercontent.com/images/H8133if8rBdqDoZH0q2A3Xwsg.jpg","https://framerusercontent.com/images/Zjde9WkwRwve3gEIBZWMFhOPoNQ.jpg","https://framerusercontent.com/images/a3dm2QCzbau9wm2vFejFwQWepRk.jpg"],
   },
   {
@@ -161,7 +161,7 @@ const PROJECTS: Project[] = [
     name:"Amateur Vodka",
     nameJsx:<>Amateur <em>Vodka</em></>,
     category:"Brand Identity", year:"2024",
-    desc:"Brand identity for a vodka that embraces rawness over perfection â bold, irreverent, unapologetically vivid.",
+    desc:"Brand identity for a vodka that embraces rawness over perfection — bold, irreverent, unapologetically vivid.",
     caseStudyJpgs:["https://framerusercontent.com/images/68ppeT40cGUK3LXuE5RF19lZo.jpg","https://framerusercontent.com/images/TOHfPUmbkGuhN90VXEd2nV37TtM.jpg","https://framerusercontent.com/images/ynz38GzeHZ7wFO4lRgCtd6cGwc.jpg","https://framerusercontent.com/images/fuCkdM7RwmOp7yLWFiZf2Xf3ew.jpg","https://framerusercontent.com/images/XGTOSKsKsznvwl9e7A1BqQhAc0.jpg"],
   },
 ]
@@ -204,10 +204,10 @@ const LOGO_PREVIEW = [
 const PRINTS_PREVIEW = [
   { src:"https://framerusercontent.com/images/7EqiVItbgXxfZkbhQsP6AVUfDc.jpg", name:"Shopping Bag", type:"Packaging" },
   { src:"https://framerusercontent.com/images/Dw2W33KNLlJXfYae1uICn728Bck.jpg", name:"Mango Box", type:"Packaging" },
-  { src:"https://framerusercontent.com/images/WUBnVKXW2iA5Y7z5pc6bl9bVVg.jpg", name:"Car Livery", type:"Print â Wrap" },
+  { src:"https://framerusercontent.com/images/WUBnVKXW2iA5Y7z5pc6bl9bVVg.jpg", name:"Car Livery", type:"Print — Wrap" },
 ]
 
-/* âââââââââââââââââââââââââââ CASE STUDY MODAL âââââââââââââââââââââââââââ */
+/* ─────────────────────────── CASE STUDY MODAL ─────────────────────────── */
 function CaseStudyModal({ project, onClose }: { project: Project | null; onClose: () => void }) {
   const overlayRef = useRef<HTMLDivElement>(null)
   const touchStartY = useRef(0)
@@ -259,7 +259,7 @@ function CaseStudyModal({ project, onClose }: { project: Project | null; onClose
           <div className="cs-bar-l">
             <span className="cs-bar-label">Case Study</span>
             <div className="cs-bar-sep" />
-            {project && <span className="cs-bar-title">{project.name} â {project.year}</span>}
+            {project && <span className="cs-bar-title">{project.name} — {project.year}</span>}
           </div>
           <button className="cs-close" onClick={onClose} aria-label="Close">
             <svg viewBox="0 0 11 11" fill="none"><path d="M1 1L10 10M10 1L1 10" strokeLinecap="round"/></svg>
@@ -275,16 +275,16 @@ function CaseStudyModal({ project, onClose }: { project: Project | null; onClose
   )
 }
 
-/* âââââââââââââââââââââââââââ PAGE âââââââââââââââââââââââââââ */
+/* ─────────────────────────── PAGE ─────────────────────────── */
 export default function Home() {
   const [activeProject, setActiveProject] = useState<Project | null>(null)
 
   return (
     <>
       <Head>
-        <title>Sarang Pedulwar â Art Director &amp; Illustrator</title>
+        <title>Sarang Pedulwar — Art Director &amp; Illustrator</title>
         <meta name="description" content="Art Director, Designer & Illustrator based in Bangalore. Crafting bold brand identities, campaigns, and visual systems." />
-        <meta property="og:title" content="Sarang Pedulwar â Art Director & Illustrator" />
+        <meta property="og:title" content="Sarang Pedulwar — Art Director & Illustrator" />
         <meta property="og:description" content="8+ years crafting bold brand identities, campaigns, and visual systems for companies that dare to stand out." />
       </Head>
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
@@ -292,11 +292,11 @@ export default function Home() {
       <Nav />
 
       <main id="top">
-        {/* ââ HERO ââ */}
+        {/* ── HERO ── */}
         <section className="hero wrap">
           <div className="hero-top">
             <span className="eyebrow">The Statement</span>
-            <span className="hero-top-r">Art Director â Illustrator</span>
+            <span className="hero-top-r">Art Director — Illustrator</span>
           </div>
           <h1 className="hero-line">
             Design is the argument.<br />
@@ -305,13 +305,13 @@ export default function Home() {
           <div className="hero-foot">
             <div className="standfirst">
               <span className="standfirst-dc">&ldquo;</span>
-              <p>For eight years I&rsquo;ve built <b>bold brand identities</b>, sharp campaigns, and visual stories for brands that dare to stand out â based in Bangalore, working with the world.</p>
+              <p>For eight years I&rsquo;ve built <b>bold brand identities</b>, sharp campaigns, and visual stories for brands that dare to stand out — based in Bangalore, working with the world.</p>
             </div>
-            <a className="hero-btn" href="/contact">About me <span className="arr">â</span></a>
+            <a className="hero-btn" href="/contact">About me <span className="arr">↗</span></a>
           </div>
         </section>
 
-        {/* ââ CLIENTS LOGO STRIP ââ */}
+        {/* ── CLIENTS LOGO STRIP ── */}
         <section className="clients">
           <div className="marquee-track">
             {[...LOGOS, ...LOGOS].map((logo, i) => (
@@ -322,14 +322,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ââ FEATURED WORKS ââ */}
+        {/* ── FEATURED WORKS ── */}
         <section className="sec wrap" id="work">
           <div className="sechead">
             <div className="sechead-l">
-              <span className="eyebrow">Â§ 01 â Selected Projects</span>
-              <h2 className="sectitle">Featured <em>Works</em><span className="sc">Â©</span></h2>
+              <span className="eyebrow">§ 01 — Selected Projects</span>
+              <h2 className="sectitle">Featured <em>Works</em><span className="sc">©</span></h2>
             </div>
-            <a className="seclink" href="/work">See all <span className="arr">â</span></a>
+            <a className="seclink" href="/work">See all <span className="arr">→</span></a>
           </div>
 
           {PROJECTS.map(p => (
@@ -347,20 +347,20 @@ export default function Home() {
                 <h3 className="proj-name">{p.nameJsx}</h3>
                 <p className="proj-desc">{p.desc}</p>
                 <button className="proj-cta" onClick={() => setActiveProject(p)}>
-                  View case study <span className="arr">â</span>
+                  View case study <span className="arr">→</span>
                 </button>
               </div>
             </article>
           ))}
         </section>
 
-        {/* ââ POSTER BLASTS ââ */}
+        {/* ── POSTER BLASTS ── */}
         <section className="sec wrap" id="posters" style={{paddingTop:0}}>
           <div className="band-head">
             <h2 className="sectitle">Poster <em>Blasts</em></h2>
             <div className="band-desc">
               Campaign posters, event graphics, and one-off moments designed to stop the scroll.
-              <br /><a className="seclink" href="/gallery">View gallery <span className="arr">â</span></a>
+              <br /><a className="seclink" href="/gallery">View gallery <span className="arr">→</span></a>
             </div>
           </div>
           <div className="poster-grid">
@@ -375,13 +375,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ââ LOGOFOLIO ââ */}
+        {/* ── LOGOFOLIO ── */}
         <section className="sec wrap" id="logofolio" style={{paddingTop:0}}>
           <div className="band-head">
             <h2 className="sectitle">Logo<em>folio</em></h2>
             <div className="band-desc">
               A curated set of wordmarks, symbols, and lettermarks built for clarity and longevity.
-              <br /><a className="seclink" href="/logos">View logofolio <span className="arr">â</span></a>
+              <br /><a className="seclink" href="/logos">View logofolio <span className="arr">→</span></a>
             </div>
           </div>
           <div className="logo-grid">
@@ -393,13 +393,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ââ PRINTS ââ */}
+        {/* ── PRINTS ── */}
         <section className="sec wrap" id="prints" style={{paddingTop:0}}>
           <div className="band-head">
             <h2 className="sectitle"><em>Prints</em></h2>
             <div className="band-desc">
               A focused collection of packaging, print collateral, and crafted brand objects.
-              <br /><a className="seclink" href="/prints">View all prints <span className="arr">â</span></a>
+              <br /><a className="seclink" href="/prints">View all prints <span className="arr">→</span></a>
             </div>
           </div>
           <div className="prints-grid">
