@@ -18,7 +18,7 @@ const CSS = `
 /* ── nav ── */
 .nv { position:sticky; top:0; z-index:50; background:rgba(7,8,6,.82); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
 .nv-inner { max-width:var(--maxw); margin:0 auto; padding-inline:var(--edge); display:flex; justify-content:space-between; align-items:center; height:84px; }
-.nv-brand img { height:34px; width:auto; display:block; }
+.nv-brand img { height:42px; width:auto; display:block; }
 .nv-links { display:flex; gap:36px; align-items:center; }
 .nv-link { font-family:var(--sans); font-weight:600; font-size:14px; letter-spacing:.04em; text-transform:uppercase; position:relative; padding:6px 0; color:var(--text); }
 .nv-link::after { content:""; position:absolute; left:0; bottom:0; height:1.5px; width:0; background:var(--lime); transition:width .28s cubic-bezier(.2,.7,.2,1); }
