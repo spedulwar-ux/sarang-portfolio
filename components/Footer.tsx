@@ -7,7 +7,7 @@ export default function Footer() {
   .ft-col ul { list-style:none; display:flex; flex-direction:column; gap:13px; }
   .ft-col a, .ft-col li { font-family:var(--sans); font-weight:500; font-size:16px; color:var(--muted-2); transition:color .2s; }
   .ft-col a:hover { color:var(--lime); }
-  .ft-lead-logo { height:32px; width:auto; margin-bottom:28px; }
+  .ft-lead-logo { height:50px; width:auto; margin-bottom:28px; }
   .ft-lead-tag { font-family:var(--serif); font-weight:400; font-size:clamp(20px,1.8vw,26px); line-height:1.34; max-width:22ch; color:var(--text); }
   .ft-lead-tag em { font-style:italic; color:var(--lime); }
   .ft-totop { margin-top:26px; display:inline-flex; align-items:center; gap:10px; font-family:var(--sans); font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; border:1px solid var(--line-2); border-radius:999px; padding:11px 20px; transition:all .25s; color:var(--text); text-decoration:none; }
